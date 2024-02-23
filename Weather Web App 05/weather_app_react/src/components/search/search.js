@@ -17,27 +17,13 @@ const Search = ({ onSearchChange }) => {
         return {
           options: response.data.map((city) => {
             return {
-              value: `${city.latitute} ${city.longitude}`,
+              value: `${city.latitude} ${city.longitude}`,
               label: `${city.name}, ${city.countryCode}`,
             };
           }),
         };
       })
       .catch((err) => { console.error(err) });
-
-    // try {
-    //   const response = await fetch(`${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${inputValue}`, geoAPIOptions);
-    //   const result = await response.json();
-    //   return {
-    //     options: result.data.map((city) => {
-    //       value = 85;
-    //       label = 65;
-    //     })
-    //   }
-    //   console.log(result);
-    // } catch (error) {
-    //   console.error(error);
-    // }
   };
 
   return (

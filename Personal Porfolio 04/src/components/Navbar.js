@@ -1,44 +1,40 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-light sticky-top">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="/">UdaySingh</a>
+                    <Link className="navbar-brand" to="/">UdaySingh</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">Home</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/blog">My Blog</a>
+                                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="/skillsAndProjects">Skills and Projects</a>
+                                <Link className="nav-link" to="/skillsAndProjects">Skills and Projects</Link>
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="/intrest">Topics of my intrest</a>
+                                <Link className="nav-link" to="/education">Education</Link>
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="/qualifications">Qualifications</a>
+                                <Link className="nav-link" to="/achievements">Achievements</Link>
                             </li>
-
                             <li className="nav-item">
-                                <a className="nav-link" href="/achievements">Achievements</a>
+                                <Link className="nav-link" to="/blog">My Blog</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/contact">Contact Me</Link>
                             </li>
                         </ul>
-                        <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Search for keyword" aria-label="Search" />
-                            <button className="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+                        
                     </div>
                 </div>
             </nav>

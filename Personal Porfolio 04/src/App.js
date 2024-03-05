@@ -1,17 +1,15 @@
 import './App.css';
 import Navbar from "./components/Navbar";
-import BootstrapCarousel from './components/BootstrapCarousel';
-// import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Introduction from './components/Introduction';
-import Contact from './components/Contact';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
       <div>
         <Navbar />
-        <BootstrapCarousel />
-        <Introduction/>
-        <Contact/>
+        {/* <BootstrapCarousel /> */}
+        <div className="container">
+          <Outlet/>
+        </div>
       </div>
   );
 }
